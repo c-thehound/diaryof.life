@@ -1,0 +1,19 @@
+.home .row{
+    padding-left:85px !important;
+    padding-right:85px !important;
+}
+.home .card{
+    width:100% !important;
+    border:0 !important;
+    min-height:400px !important;
+}
+.home .card .header{
+    font-size:25px;
+    font-weight:bold;
+    padding:30px;
+}
+.home .card .content{
+    font-size:15px !important;
+    border:none !important;
+    color:purple;
+}

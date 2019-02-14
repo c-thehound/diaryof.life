@@ -1,0 +1,42 @@
+.signup{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100%;
+    background-color:purple;
+}
+.signup .card .header{
+    margin-top:-40px !important;
+    color:purple !important;
+    font-family: 'Playfair Display',sans-serif !important;
+    font-size:25pt;
+}
+.signup .card p{
+    font-size:20px;
+}
+.signup .card{
+    padding-top:50px !important;
+    min-width:400px !important;
+    min-height:400px !important;
+    margin: auto !important;
+    margin-top:10vh !important;
+}
+.signup .card .input{
+    min-height:50px;
+}
+.signup .card button{
+    min-height:50px;
+    background-image: linear-gradient(10deg,purple,blue);
+    color:#fafafa;
+    font-size:20px;
+}
+.signup .card .content{
+    color:purple !important;
+    text-align: center;
+    padding:40px !important;
+}
+.signup .card .content.extra{
+    font-size:15px;
+    background-color:#e9e9e9;
+}

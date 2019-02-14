@@ -1,0 +1,10 @@
+footer{
+    clear: both;
+    /* position: ; */
+    bottom:0 !important;
+    left:0;
+    right:0;
+    height:50px;
+    margin-top:-50px;
+    border-top:.5px solid #727272
+}

@@ -1,0 +1,44 @@
+.signin{
+    position:fixed;
+    height:100vh;
+    width:100%;
+    top:0;
+    left:0;
+    background-color:purple;
+}
+.signin .card .header{
+    margin-top:-40px !important;
+    color:purple !important;
+}
+.signin .card p{
+    font-size:20px;
+}
+.signin .card .header{
+    font-size:25pt;
+    font-family: 'Playfair Display',sans-serif !important;
+}
+.signin .card{
+    padding-top:50px !important;
+    min-width:400px !important;
+    min-height:400px !important;
+    margin: auto !important;
+    margin-top:10vh !important;
+}
+.signin .card .input{
+    min-height:50px;
+}
+.signin .card button{
+    min-height:50px;
+    background-image: linear-gradient(10deg,purple,blue);
+    color:#fafafa;
+    font-size:20px;
+}
+.signin .card .content{
+    color:purple !important;
+    text-align: center;
+    padding:40px !important;
+}
+.signin .card .content.extra{
+    font-size:15px;
+    background-color:#e9e9e9;
+}
