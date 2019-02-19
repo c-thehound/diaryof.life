@@ -1,54 +1,30 @@
-.header{
+.head{
+    position: fixed;
     top:0;
     right:0;
     left:0;
+    height:100px;
+    background-color:#2E3133;
+    padding:20px;
 }
-.head{
-    font-family: 'Playfair Display',sans-serif;
-    padding-left:200px;
-    color:#fafafa;
-    font-weight:bold;
-    font-size:20pt !important;
-}
-button.signupbtn{
-    border-radius:30px !important;
-    box-shadow: 0 0 0 1px #fafafa !important;
-}
-.header .menu.right{
-    position: fixed;
-    right:0 !important;
-    margin-right:0 !important;
-}
-.header .menu a{
-    font-size:11pt;
-    font-weight: bold;
-    font-family: 'Playfair Display',sans-serif;
-    color:#fafafa;
-}
-.header .intro{
-    top:70px !important;
-    padding-left: 100px !important;
-    padding-right:100px !important;
-}
-.header .intro .card .header{
-    padding:25px !important;
-    font-size:40px;
-}
-.header .intro .card{
+.head .menu{
+    border:0 !important;
+    background-color:#2E3133 !important;
     border-radius:0 !important;
-    width:100% !important;
-    box-shadow:none !important;
+    box-shadow: 0 2px 1px -2px gray !important;
 }
-.header .intro .card .content.extra{
-    padding:10px !important;
-    font-size:20px;
-    padding-left:50px !important;
+.head .title{
+    text-transform: uppercase;
+    color:#fafafa;
+    font-size:40px;
+    font-family:'Special Elite',cursive;
 }
-.header .row.title{
-    z-index: 9999 !important;
-    position: fixed !important;
-    width:100% !important;
-    right:0 !important;
-    border-bottom: 1px solid #727272;
-    background-image:linear-gradient(10deg,purple,blue) !important;
+.head .title p{
+    font-size:15px;
+    color:#727272;
+}
+.head .nav a{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size:15px;
+    color:#fafafa !important;
 }

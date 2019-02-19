@@ -5,3 +5,11 @@
 .stories .row .card{
     width:100%;
 }
+.story_title{
+    font-family: 'Sawarabi Mincho',cursive;
+    font-size:25px;
+    font-weight:bold;
+}
+.snippet{
+    font-family:"Ubuntu",cursive;
+}

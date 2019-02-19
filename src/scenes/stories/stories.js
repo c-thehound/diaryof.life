@@ -7,14 +7,13 @@ class Stories extends React.Component{
     render(){
         return(
             <Navigation>
-            <div className="stories">
+            <div className="stories app-content">
             <Grid stackable>
             <Grid.Row >
                 <Grid.Column width={10}>
-                <Header as="h1">Latest</Header>
                 <Card>
                     <Card.Content>
-                        <p className="title">Story title</p>
+                        <p className="story_title">Story title</p>
                         <p className="snippet">A short preview of the story</p>
                     </Card.Content>
                     <Card.Content extra>
@@ -24,7 +23,7 @@ class Stories extends React.Component{
                 </Card>
                 </Grid.Column>
                 <Grid.Column width={6}>
-                <Header as="h1">Featured</Header>
+                
                 </Grid.Column>
             </Grid.Row>
             </Grid>

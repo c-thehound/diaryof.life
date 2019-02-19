@@ -1,5 +1,5 @@
 import React from 'react';
-import {Menu,Card,Input,Header, Message, Button, Grid, Search} from  'semantic-ui-react';
+import {Menu,Card,Input,Header, Message, Button, Grid, Search, Icon} from  'semantic-ui-react';
 import './navigation.css';
 import SignIn from '../signin/signin';
 import {NavLink} from 'react-router-dom';
@@ -11,60 +11,33 @@ export default class Navigation extends React.Component{
 
     render(){
         return(
-            <div className="header">
-            <Grid>
-                <Grid.Row className="title">
-                <Menu secondary>
+            <div className="head">
+            <Menu>
+                <div className="title">
+                diary of life
+                <p>
+                <Icon name="world"/>Stories of life that connect us
+                </p>
+                </div>
+                <Menu.Menu className="nav" position="right">
                 <Menu.Item>
-                    <div className="head">
-                    Diary of Life
-                    </div>
-                </Menu.Item>
-                <Menu.Menu position="right">
-                <Menu.Item>
-                    <NavLink to="/stories">
-                    Stories
-                    </NavLink>
+                    <NavLink to="/home">Home</NavLink>
                 </Menu.Item>
                 <Menu.Item>
-                    <NavLink to="/post">
-                    Post
-                    </NavLink>
+                    <NavLink to="/stories">Stories</NavLink>
                 </Menu.Item>
                 <Menu.Item>
-                    <NavLink to="/login">
-                    Sign in
-                    </NavLink>
+                    <NavLink to="/login">Login</NavLink>
                 </Menu.Item>
                 <Menu.Item>
-                    <NavLink to="/signup">
-                    <Button basic className="signupbtn">
-                    Sign up
-                    </Button>
-                    </NavLink>
+                    <NavLink to="/signup">Sign up</NavLink>
                 </Menu.Item>
                 <Menu.Item>
-                    <Search
-                    value="Search diary of life"
-                    />
+                    <Search></Search>
                 </Menu.Item>
                 </Menu.Menu>
-                </Menu>
-                </Grid.Row>
-                <Grid.Row className="intro">
-                    <Card>
-                        <Card.Header>
-                            Diary of life
-                        </Card.Header>
-                        <Card.Content extra>
-                        Stories of life that connect us
-                        </Card.Content>
-                    </Card>
-                </Grid.Row>
-            </Grid>
-            <div className="app-content">
+            </Menu>
             {this.props.children}
-            </div>
             </div>
         );
     }

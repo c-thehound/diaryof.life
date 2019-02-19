@@ -1,19 +1,19 @@
 import React from 'react';
 import Navigation from '../../components/navigation/navigation';
-import { Grid, Card } from 'semantic-ui-react';
+import { Grid, Card, Icon } from 'semantic-ui-react';
 import './home.css';
 
 export default class Home extends React.Component{
     render(){
         return(
             <Navigation>
-                <div className='home'>
-                <Grid stackable>
+                <div className='home app-content'>
+                <Grid>
                     <Grid.Row>
                         <Grid.Column width={8}>
                         <Card>
                             <Card.Header>
-                                Collaborative storytelling
+                                Collaborative Storytelling
                             </Card.Header>
                             <Card.Content>
                             Civilization is built out of stories: mine, yours, his, hers. When we share our stories, our hopes our fears, we have a better chance of understanding each other, of become more integrated and less separated.
@@ -25,7 +25,7 @@ In order to encourage sharing of more personal stories, we have the concept of P
                         <Grid.Column width={8}>
                         <Card>
                             <Card.Header>
-                                Without comments
+                                Without Comments
                             </Card.Header>
                             <Card.Content>
                             Too often people listen, not to understand, but to respond. We don't want that here. We want understanding. So if a particular story moves you to express yourself, do it as a story inspired by another story. There won't be any back and forth in the comment section to take away from the story.
@@ -34,7 +34,13 @@ Too often you see comments on YouTube videos or Facebook posts that look just li
                         </Card>
                         </Grid.Column>
                     </Grid.Row>
+                    <Grid.Row className="continue">
+                    <span>
+                        Show me some more stories already <Icon name="arrow alternate circle right outline"/>
+                    </span>
+                    </Grid.Row>
                 </Grid>
+    
                 </div>
             </Navigation>
         );

@@ -1,12 +1,15 @@
 import $ from 'jquery';
-import { BASE_URL } from '../settings';
 import { LOGIN, LOGIN_FAILED } from '../constants';
+import csrftoken from '../../../utils/getCSRFCookie';
 
 export const login = (credentials) => dispatch =>{
     $.ajax({
-        url:BASE_URL+'api/auth/login/',
+        url:'api/auth/login/',
         type:"POST",
         data:credentials,
+        headers:{
+            'X-CSRFTOKEN':csrftoken
+        },
         success:function(response){
             dispatch({
                 type:LOGIN,

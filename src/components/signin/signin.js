@@ -5,6 +5,7 @@ import {NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {login} from '../../services/store/actions/user-actions';
 import WOW from 'wowjs';
+import csrftoken from '../../utils/getCSRFCookie';
 
 const options = [
     { key: 'user', text: 'Account', icon: 'user' },
