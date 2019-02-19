@@ -2,25 +2,38 @@ import React from 'react';
 import Navigation from '../../components/navigation/navigation';
 import { Grid ,Header,Card, Image} from 'semantic-ui-react';
 import './stories.css';
+import {connect} from 'react-redux';
+import {fetchStories} from '../../services/store/actions/storyactions';
 
 class Stories extends React.Component{
+    componentDidMount(){
+        this.props.fetchStories();
+    }
     render(){
+        const {stories={}} = this.props;
         return(
             <Navigation>
             <div className="stories app-content">
             <Grid stackable>
             <Grid.Row >
                 <Grid.Column width={10}>
-                <Card>
-                    <Card.Content>
-                        <p className="story_title">Story title</p>
-                        <p className="snippet">A short preview of the story</p>
-                    </Card.Content>
-                    <Card.Content extra>
-                    <Image avatar />
-                    <span>Author</span>
-                    </Card.Content>
-                </Card>
+                {stories.results ? 
+                    <div>
+                        {stories.results.map(story => (
+                        <Card>
+                            <Card.Content>
+                                    <p className="story_title">{story.title}</p>
+                                    <p className="tagline">{story.tagline}</p>
+                                    <div className="snippet" dangerouslySetInnerHTML={{__html:story.html}}></div>
+                            </Card.Content>
+                            <Card.Content extra>
+                                <Image avatar />
+                                <span>Author</span>
+                            </Card.Content>
+                        </Card>
+                ))}
+                    </div>
+                    :null}
                 </Grid.Column>
                 <Grid.Column width={6}>
                 
@@ -33,4 +46,10 @@ class Stories extends React.Component{
     }
 }
 
-export default Stories;
+const mapStateToProps = state =>{
+    return{
+        stories:state.stories.stories
+    }
+}
+
+export default connect(mapStateToProps,{fetchStories})(Stories);

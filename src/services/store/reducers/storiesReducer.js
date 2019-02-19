@@ -1,7 +1,7 @@
 import { FETCH_STORIES, FETCH_STORIES_FAILED, FETCH_STORY_DETAIL, FETCH_STORY_DETAIL_FAILED } from "../constants";
 
 const initialState = {
-    stories:[],
+    stories:{},
     story:{},
     error:{}
 }
