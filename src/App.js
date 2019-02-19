@@ -24,7 +24,6 @@ class App extends Component {
         <Route path='/post' component={Post}/>
         <Route render={() => <Redirect to="/home"/>}></Route>
       </Switch>
-      {/* <Footer/> */}
       </div>
       </Provider>
     );

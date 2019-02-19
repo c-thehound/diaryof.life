@@ -1,6 +1,7 @@
 .home .card{
     width:100% !important;
     min-height:400px !important;
+    box-shadow: none !important;
 }
 .home .card .header{
     min-height:60px;
@@ -10,13 +11,13 @@
     color:#727272;
 }
 .home .card .content{
-    font-family:"Staachliches",cursive;
-    font-size:20px !important;
+    font-family:"M PLUS 1p",cursive;
+    font-size:18px !important;
     font-kerning: auto;
     font-feature-settings: "c2pc";
     padding:40px !important;
     padding-right:400px !important;
-    color:purple;
+    color:rgb(78, 1, 78);
 }
 .home .continue{
     font-size:20px;

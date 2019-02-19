@@ -2,6 +2,7 @@ import React from 'react';
 import Navigation from '../../components/navigation/navigation';
 import { Grid, Card, Icon } from 'semantic-ui-react';
 import './home.css';
+import {NavLink} from 'react-router-dom';
 
 export default class Home extends React.Component{
     render(){
@@ -40,7 +41,9 @@ Too often you see comments on YouTube videos or Facebook posts that look just li
                     </Grid.Row>
                     <Grid.Row className="continue">
                     <span>
+                        <NavLink to='/stories'>
                         Show me some more stories already <Icon name="arrow alternate circle right outline"/>
+                        </NavLink>
                     </span>
                     </Grid.Row>
                 </Grid>
