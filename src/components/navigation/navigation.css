@@ -1,4 +1,4 @@
-.head{
+.layout{
     position: fixed;
     top:0;
     right:0;
@@ -6,6 +6,7 @@
     height:100px;
     background-color:#2E3133;
     padding:20px;
+    z-index:999;
 }
 .head .menu{
     border:0 !important;

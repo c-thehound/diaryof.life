@@ -12,6 +12,7 @@ export default class Navigation extends React.Component{
     render(){
         return(
             <div className="head">
+            <div className="layout">
             <Menu>
                 <div className="title">
                 diary of life
@@ -37,6 +38,7 @@ export default class Navigation extends React.Component{
                 </Menu.Item>
                 </Menu.Menu>
             </Menu>
+            </div>
             {this.props.children}
             </div>
         );

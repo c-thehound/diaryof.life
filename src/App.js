@@ -9,6 +9,7 @@ import Post from './scenes/post/post';
 import {Provider} from 'react-redux';
 import store from './services/store/store';
 import 'animate.css/animate.css';
+import { Card } from 'semantic-ui-react';
 
 class App extends Component {
   render() {

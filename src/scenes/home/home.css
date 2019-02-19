@@ -11,10 +11,12 @@
 }
 .home .card .content{
     font-family:"Staachliches",cursive;
-    font-size:15px !important;
+    font-size:20px !important;
     font-kerning: auto;
     font-feature-settings: "c2pc";
     padding:40px !important;
+    padding-right:400px !important;
+    color:purple;
 }
 .home .continue{
     font-size:20px;
