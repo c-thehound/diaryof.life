@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 import store from './services/store/store';
 import 'animate.css/animate.css';
 import { Card } from 'semantic-ui-react';
+import StoryDetail from './scenes/stories/storyDetail';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
         <Route path="/signup" component={SignUp}/>
         <Route path='/home' component={Home}/>
         <Route path='/stories' component={Stories}/>
+        <Route path="/story/:title" component={StoryDetail}/>
         <Route path='/post' component={Post}/>
         <Route render={() => <Redirect to="/home"/>}></Route>
       </Switch>

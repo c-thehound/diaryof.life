@@ -9,20 +9,105 @@
     font-family: 'Julius Sans One',cursive;
     font-size:25px;
     font-weight:bold;
+    color:rgba(8, 155, 8, 0.966);
 }
 .snippet{
     font-family:"Ubuntu",cursive;
+    color:#727272;
 }
 .storiesmenu .menu{
     background-color:#fafafa !important;
     border:0 !important;
     box-shadow:none !important;
 }
+.storiesmenu .menu a{
+    background-color:#2E3133;
+    color:#fafafa;
+    font-family:'Ubuntu',sans-serif;
+}
+.stories .row .card .extra{
+    padding:10px;
+}
+.stories .row .card .avatar{
+    width:50px;
+    background-color:#727272;
+    height:50px;
+    float:left;
+}
+.stories .row .card .detailtwo{
+    position: relative;
+    left:20px;
+    padding:1px;
+}
+.stories .row .card .author{
+    color:#000;
+}
+.tagline{
+    color:#2E3133;
+    font-weight: bold;
+    font-size:15px;
+}
 
-/* Media querie */
+/* Media queries */
+
+@media(max-width:1300px){
+    .stories .row{
+        padding-left:0px !important;
+        padding-right:0px !important;
+    }
+}
 @media(max-width:768px){
     .stories .row{
         padding-left: 0px !important;
         padding-right:0px !important;
+    }
+    .snippet{
+        font-family: 'Ubuntu',sans-serif;
+        font-size:18px !important;
+    }
+}
+
+/* Story view */
+.story .row{
+    top:20px;
+}
+.story .card{
+    width:100% !important;
+    box-shadow:none !important;
+}
+.story .card .header{
+    padding:20px;
+}
+.story .card .story_detail_title{
+    font-size:30px;
+    font-family:'Julius Sans One',cursive;
+    font-weight: bolder;
+}
+.story .card .story_detail_tagline{
+    font-size:20px;
+    font-weight:bold;
+    color:#727272;
+    font-family:'Ubuntu',sans-serif;
+}
+.story .card .story_written_by{
+    font-weight:bold;
+}
+.story .card .story_written_by span{
+    color:rgba(8, 155, 8, 0.966);
+}
+.story .card .story_published_on{
+    font-weight:bold;
+    font-size:20px;
+}
+.story .card .story_detail{
+    font-size:20px !important;
+    padding:10px;
+}
+
+/* media queries */
+@media(max-width:768px){
+    .story .row .column{
+        padding-left:0 !important;
+        padding-right:0 !important;
     }
 }
