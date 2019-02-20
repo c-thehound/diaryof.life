@@ -8,16 +8,17 @@
     padding:20px;
     font-family: 'Sawarabi Mincho',cursive;
     font-size:30px;
-    color:#727272;
+    color:#0a0a0a;
 }
 .home .card .content{
-    font-family:"M PLUS 1p",cursive;
+    font-family:"Ubuntu",cursive;
     font-size:18px !important;
     font-kerning: auto;
+    font-weight:200;
     font-feature-settings: "c2pc";
     padding:40px !important;
     padding-right:400px !important;
-    color:rgb(78, 1, 78);
+    color:rgb(99, 97, 97);
 }
 .home .continue{
     font-size:20px;
@@ -29,4 +30,40 @@
     float:right !important;
     position: absolute;
     right:30px !important;
+}
+.home .card .content p{
+    padding-left:30px;
+}
+.quote::before{
+    content:'"';
+    position: absolute;
+    margin-right:30px !important;
+    font-size:50px;
+    font-weight:bold;
+    font-family:'Rock Salt',cursive;
+    height:50px;
+    color:purple;
+    background-repeat: no-repeat;
+}
+
+/* Media queries */
+@media(max-width:768px){
+    .home .card .header{
+        font-size:20px;
+    }
+    .home .card .content{
+        padding:0 !important;
+    }
+    .quote{
+        margin-top:30px;
+    }
+}
+
+@media(max-width:1200px){
+    .home .card .content{
+        padding:0 !important;
+    }
+    .quote{
+        margin-top:30px;
+    }
 }

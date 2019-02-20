@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../../components/navigation/navigation';
-import { Grid ,Header,Card, Image} from 'semantic-ui-react';
+import { Grid ,Header,Card, Image, Menu, Button} from 'semantic-ui-react';
 import './stories.css';
 import {connect} from 'react-redux';
 import {fetchStories} from '../../services/store/actions/storyactions';
@@ -15,6 +15,15 @@ class Stories extends React.Component{
             <Navigation>
             <div className="stories app-content">
             <Grid stackable>
+            <Grid.Row className="storiesmenu">
+                <Menu>
+                    <Menu.Item>
+                        <Button as="a">
+                        Featured
+                        </Button>
+                    </Menu.Item>
+                </Menu>
+            </Grid.Row>
             <Grid.Row >
                 <Grid.Column width={10}>
                 {stories.results ? 

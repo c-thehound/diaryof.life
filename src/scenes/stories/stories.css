@@ -13,3 +13,16 @@
 .snippet{
     font-family:"Ubuntu",cursive;
 }
+.storiesmenu .menu{
+    background-color:#fafafa !important;
+    border:0 !important;
+    box-shadow:none !important;
+}
+
+/* Media querie */
+@media(max-width:768px){
+    .stories .row{
+        padding-left: 0px !important;
+        padding-right:0px !important;
+    }
+}
