@@ -11,11 +11,10 @@
     color:#0a0a0a;
 }
 .home .card .content{
-    font-family:"Ubuntu",cursive;
+    font-family:"Alegreya Sans",sans-serif !important;
     font-size:18px !important;
     font-kerning: auto;
     font-weight:200;
-    font-feature-settings: "c2pc";
     padding:40px !important;
     padding-right:400px !important;
     color:rgb(99, 97, 97);
