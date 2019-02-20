@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '../../components/navigation/navigation';
 import {Icon, Grid, Header, Card, Form } from 'semantic-ui-react';
-import Editor from 'for-editor';
 import './post.css';
 import AceEditor from 'react-ace';
 import $ from 'jquery';
@@ -40,7 +39,7 @@ export default class Post extends React.Component{
     }
 
     render(){
-        const {desc,window} =this.state;
+        const {window} =this.state;
         // Is the window width is less than 768 pixels, tell the user the page is best viewed on a desktop
         if(window < 768){
             return <div className="changetodesktop">

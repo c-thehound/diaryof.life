@@ -9,7 +9,6 @@ import Post from './scenes/post/post';
 import {Provider} from 'react-redux';
 import store from './services/store/store';
 import 'animate.css/animate.css';
-import { Card } from 'semantic-ui-react';
 import StoryDetail from './scenes/stories/storyDetail';
 
 class App extends Component {

@@ -1,17 +1,8 @@
 import React from 'react';
 import './signin.css';
-import { Dropdown,Header, Card, Form } from 'semantic-ui-react';
-import {NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {login} from '../../services/store/actions/user-actions';
 import WOW from 'wowjs';
-import csrftoken from '../../utils/getCSRFCookie';
-
-const options = [
-    { key: 'user', text: 'Account', icon: 'user' },
-    { key: 'settings', text: 'Settings', icon: 'settings' },
-    { key: 'sign-out', text: 'Sign Out', icon: 'sign out' },
-  ]
 
 class SignIn extends React.Component{
 
@@ -26,6 +17,7 @@ class SignIn extends React.Component{
     componentDidMount(){
         var wow = new WOW.WOW();
         wow.init();
+        this.props.login();
     }
 
     handleChange = (e) =>{
@@ -43,23 +35,12 @@ class SignIn extends React.Component{
     }
 
     render(){
-        
+        const {loginform,error} = this.props;
+        if(error){
+            return <div className="signin" dangerouslySetInnerHTML={{__html:error}}></div>
+        }
         return(
-            <div className="signin">
-            <Card className="wow fadeIn">
-                <Card.Content>
-                    <Header as="h2">DIARY OF LIFE</Header>
-                    <p>Sign in</p>
-                    <Form>
-                        <Form.Input onChange={this.handleChange} icon="user" iconPosition="left" type="text" name="username" placeholder="Username"/>
-                        <Form.Input onChange={this.handleChange} icon="lock" iconPosition="left" type="password" name="password" placeholder="Password"/>
-                        <Form.Button onClick={this.handleLogin} content="Log in" fluid/>
-                    </Form>
-                </Card.Content>
-                <Card.Content extra>
-                Don't have an account ? <NavLink to="/signup">Sign up</NavLink>
-                </Card.Content>
-            </Card>
+            <div className="signin" dangerouslySetInnerHTML={{__html:loginform}}>
             </div>
         );
     }
@@ -67,7 +48,8 @@ class SignIn extends React.Component{
 
 const mapStateToProps = state =>{
     return{
-        userdata:state.user.userdata
+        loginform:state.user.login,
+        error:state.user.error
     }
 }
 

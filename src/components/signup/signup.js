@@ -3,7 +3,6 @@ import './signup.css';
 import { Card, Form,Header } from 'semantic-ui-react';
 import {NavLink} from 'react-router-dom';
 import WOW from 'wowjs';
-import $ from 'jquery';
 
 class SignUp extends React.Component{
 

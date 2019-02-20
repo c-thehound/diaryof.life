@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigation from '../../components/navigation/navigation';
-import { Grid ,Header,Card, Image, Menu, Button} from 'semantic-ui-react';
+import { Grid,Card, Image, Menu, Button} from 'semantic-ui-react';
 import './stories.css';
 import {connect} from 'react-redux';
 import {fetchStories} from '../../services/store/actions/storyactions';

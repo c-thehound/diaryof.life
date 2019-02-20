@@ -1,8 +1,8 @@
 import { LOGIN, LOGIN_FAILED } from "../constants";
 
 const initialState = {
-    userdata:{},
-    error:{}
+    login:{},
+    error:null
 }
 
 export default function(state = initialState,action){
@@ -10,7 +10,7 @@ export default function(state = initialState,action){
         case LOGIN:
             return{
                 ...state,
-                userdata:action.payload
+                login:action.payload
             }
         case LOGIN_FAILED:
             return{
