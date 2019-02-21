@@ -19,9 +19,14 @@ class AuthorCache {
         return promise;
       }
     } else {
+      // We don't have the data in the cache, we need to request it.
       let promise = fetch(url).then(res => res.json());
       console.debug("Fetching ", url);
       this.cache[url] = promise;
+      promise.then(res => {
+        this.cache[url] = res;
+        return res;
+      });
       return promise;
     }
   }
