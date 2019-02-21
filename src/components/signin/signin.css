@@ -4,41 +4,56 @@
     width:100%;
     top:0;
     left:0;
-    background-color:purple;
-}
-.signin .card .header{
-    margin-top:-40px !important;
-    color:purple !important;
-}
-.signin .card p{
-    font-size:20px;
-}
-.signin .card .header{
-    font-size:25pt;
-    font-family: 'Playfair Display',sans-serif !important;
+    background-color:#2E3133;
 }
 .signin .card{
-    padding-top:50px !important;
-    min-width:400px !important;
-    min-height:400px !important;
-    margin: auto !important;
-    margin-top:10vh !important;
+    margin:auto !important;
+    top:20vh !important;
+    text-align:center;
+    background:transparent !important;
 }
-.signin .card .input{
-    min-height:50px;
-}
-.signin .card button{
-    min-height:50px;
-    background-image: linear-gradient(10deg,purple,blue);
+.signin .card .header{
     color:#fafafa;
+    padding:10px;
+    font-family:'Special Elite',sans-serif;
+    text-transform: uppercase;
+}
+.signin .card .header p{
+    font-family:'Ubuntu',sans-serif;
+    font-weight: bold;
     font-size:20px;
 }
-.signin .card .content{
-    color:purple !important;
+.signin .card .form .input{
     text-align: center;
-    padding:40px !important;
+    border-radius:0;
+    color:#fafafa;
+    background:transparent !important;
+}
+.signin .card .form .icon{
+    color:green;
+}
+.signin input{
+    background:transparent !important;
+    border-radius: 0px !important;
+    color:#fafafa !important;
+    font-family: 'Ubuntu',sans-serif !important;
+}
+.signin input:focus{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.25s;
+    width:100px !important;
+}
+.signin button{
+    border-radius:0 !important;
+    background-color:green !important;
+    color:#fafafa !important;
 }
 .signin .card .content.extra{
+    color:green;
+    font-family:'Alegreya Sans',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight:400;
     font-size:15px;
-    background-color:#e9e9e9;
+}
+.signin .card .content.extra a{
+    color:rgb(125, 125, 224) !important;
 }

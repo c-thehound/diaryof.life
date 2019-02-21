@@ -1,8 +1,10 @@
 import React from 'react';
 import './signin.css';
 import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import {login} from '../../services/store/actions/user-actions';
 import WOW from 'wowjs';
+import {Card, Form, Header} from 'semantic-ui-react';
 
 class SignIn extends React.Component{
 
@@ -35,12 +37,26 @@ class SignIn extends React.Component{
     }
 
     render(){
-        const {loginform,error} = this.props;
-        if(error){
-            return <div className="signin" dangerouslySetInnerHTML={{__html:error}}></div>
-        }
         return(
-            <div className="signin" dangerouslySetInnerHTML={{__html:loginform}}>
+            <div className="signin">
+            <Card className="wow fadeIn">
+                <Card.Header>
+                    <div>
+                        <Header as="h2">Diary of life</Header>
+                        <p>LOGIN</p>
+                    </div>
+                </Card.Header>
+                <Card.Content>
+                    <Form autoComplete="off" autofill="off">
+                        <Form.Input onChange={this.handleChange} autoComplete="username" required icon="user" iconPosition="left" type="text" name="username" placeholder="Username"/>
+                        <Form.Input onChange={this.handleChange} autoComplete="password" required icon="lock" iconPosition="left" type="password" name="password" placeholder="Password"/>
+                        <Form.Button onClick={this.handleLogin} fluid type="submit" content="LOGIN"/>
+                    </Form>
+                </Card.Content>
+                <Card.Content extra>
+                <p>Don't have an account? <NavLink to="/signup">Sign up</NavLink></p>
+                </Card.Content>
+            </Card>
             </div>
         );
     }

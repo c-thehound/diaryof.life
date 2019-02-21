@@ -17,7 +17,7 @@ class StoryDetail extends React.Component{
         var date_string = formatDateTime(date);
         return date_string;
     }
-    
+
     fetchAuthor =(url) =>{
         fetch(url)
         .then(res => res.json())
@@ -50,7 +50,7 @@ class StoryDetail extends React.Component{
                                 Written by <span>Anonymous</span>
                             </p>
                             <p className="story_published_on">
-                                Published at {this.formatDate(story_object.published_at)}
+                                Published {this.formatDate(story_object.published_at)}
                             </p>
                         </Card.Header>
                         {/* The actual story goes here */}

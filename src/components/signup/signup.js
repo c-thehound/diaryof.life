@@ -15,9 +15,13 @@ class SignUp extends React.Component{
         return(
             <div className="signup">
             <Card className="wow fadeIn">
+            <Card.Header>
+                <div>
+                    <Header as="h2">Diary of life</Header>
+                    <p>SIGNUP</p>
+                </div>
+            </Card.Header>
                 <Card.Content>
-                <Header as="h2">DIARY OF LIFE</Header>
-                    <p>Create an account</p>
                     <Form>
                     <Form.Input type="text" name="username" placeholder="Username" icon="user" iconPosition="left"/>
                     <Form.Input type="email" name="email" placeholder="Email" icon="mail" iconPosition="left"/>

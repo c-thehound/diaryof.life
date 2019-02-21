@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color:#fafafa !important;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 code {
@@ -20,7 +20,8 @@ code {
   height:auto;
   /* padding-top:40px; */
   padding:0 100px;
-  margin-bottom:400px !important;
+  padding-bottom: 50px !important;
+  overflow:hidden;
 }
 .card{
   border-radius:0 !important;

@@ -21,8 +21,10 @@
 }
 .home .continue{
     font-size:20px;
-    padding:20px !important;
+    padding:10px !important;
+    margin-bottom: 20px !important;
     text-align: right !important;
+    font-family:'Alegreya Sans',sans-serif;
 }
 .home .continue span{
     color:#3A5ED5;
