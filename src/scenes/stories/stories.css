@@ -119,4 +119,7 @@ p{
         padding-left:0 !important;
         padding-right:0 !important;
     }
+    .story_detail img{
+        width:95vw;
+    }
 }

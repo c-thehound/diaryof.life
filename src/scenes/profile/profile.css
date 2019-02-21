@@ -1,0 +1,30 @@
+.profile .grid{
+    border:0 !important;
+    box-shadow: none !important;
+}
+.profile .grid .row{
+    box-shadow: none !important;
+}
+.profile .profileimage .card{
+    max-height:500px;
+    width:100%;
+}
+.profile .profileimage .card img{
+    max-height:400px !important;
+    width:100%;
+    border-radius:0 !important;
+}
+
+@media(max-width:768px){
+    .profile .profileimage{
+        /* position:absolute; */
+        right: 0 !important;
+        margin-top:0 !important;
+    }
+    .profile .profileimage .card{
+        max-height:200px !important;
+    }
+    .profile .profileimage .card img{
+        max-height:inherit !important;
+    }
+}

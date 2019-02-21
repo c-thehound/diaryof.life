@@ -10,6 +10,7 @@ import {Provider} from 'react-redux';
 import store from './services/store/store';
 import 'animate.css/animate.css';
 import StoryDetail from './scenes/stories/storyDetail';
+import Profile from './scenes/profile/profile';
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
         <Route path='/stories' component={Stories}/>
         <Route path="/story/:title" component={StoryDetail}/>
         <Route path='/post' component={Post}/>
+        <Route path='/profile' component={Profile}/>
         <Route render={() => <Redirect to="/home"/>}></Route>
       </Switch>
       </div>
