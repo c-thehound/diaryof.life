@@ -1,25 +1,22 @@
 import React from 'react';
 import './profile.css';
 import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import Navigation from '../../components/navigation/navigation';
 import { Grid, Card, Input, TextArea } from 'semantic-ui-react';
 import $ from 'jquery';
+import {fetchStoriesByAuthor} from '../../services/store/actions/storyactions';
+import {StoryLink} from '../stories/stories';
 
 class Profile extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            author:null
-        }
-    }
+
     componentDidMount(){
-        $('.details .input,.details .textarea').on('click',function(){
-            $('.details .icon').removeClass('false');
-        })
+        this.props.fetchStoriesByAuthor(this.props.location.state.author.id);
     }
+
     render(){
         const {author} = this.props.location.state;
-        console.log(author);
+        const {storiesbyauthor} = this.props;
         return(
             <Navigation>
                 {author === undefined ? null:
@@ -35,7 +32,19 @@ class Profile extends React.Component{
                                         <Input disabled value={author.name}/>
                                         <TextArea className="false" disabled value={author.bio_text}/>
                                         </Grid.Column>
-                                        <Grid.Column width={5} className="moredetails">
+                                        <Grid.Column width={5} className="storiesbyauthor">
+                                        {storiesbyauthor? <div>
+                                            {storiesbyauthor.results.map(story =>(
+                                                <Card>
+                                                    <Card.Content>
+                                                        <StoryLink className="link" story={story}/>
+                                                    </Card.Content>
+                                                    <Card.Content extra>
+                                                    {story.tagline}
+                                                    </Card.Content>
+                                                </Card>
+                                            ))}</div>
+                                            :null}
                                         </Grid.Column>
                                     </Grid.Row>
                                     <Grid.Row>
@@ -49,4 +58,10 @@ class Profile extends React.Component{
     }
 }
 
-export default connect()(Profile);
+const mapStateToProps = state =>{
+    return{
+        storiesbyauthor:state.stories.storiesbyauthor
+    }
+}
+
+export default connect(mapStateToProps,{fetchStoriesByAuthor})(Profile);

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import csrftoken from '../../../utils/getCSRFCookie';
-import { FETCH_STORIES, FETCH_STORIES_FAILED, FETCH_STORY_DETAIL, FETCH_STORY_DETAIL_FAILED } from '../constants';
+import { FETCH_STORIES, FETCH_STORIES_FAILED, FETCH_STORY_DETAIL, FETCH_STORY_DETAIL_FAILED, FETCH_STORIES_BY_AUTHOR } from '../constants';
 
 export const fetchStories = () => dispatch =>{
     $.ajax({
@@ -40,6 +40,22 @@ export const fetchStoryDetail = (id) => dispatch =>{
         error:function(res){
             dispatch({
                 type:FETCH_STORY_DETAIL_FAILED,
+                payload:res
+            })
+        }
+    })
+}
+
+export const fetchStoriesByAuthor = (author_id) => dispatch =>{
+    $.ajax({
+        url:'/api/stories/?author_id='+author_id,
+        type:'GET',
+        headers:{
+            'X-CSRFTOKEN':csrftoken
+        },
+        success:function(res){
+            dispatch({
+                type:FETCH_STORIES_BY_AUTHOR,
                 payload:res
             })
         }

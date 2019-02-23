@@ -1,9 +1,10 @@
-import { FETCH_STORIES, FETCH_STORIES_FAILED, FETCH_STORY_DETAIL, FETCH_STORY_DETAIL_FAILED } from "../constants";
+import { FETCH_STORIES, FETCH_STORIES_FAILED, FETCH_STORY_DETAIL, FETCH_STORY_DETAIL_FAILED, FETCH_STORIES_BY_AUTHOR } from "../constants";
 
 const initialState = {
     stories:{},
     story:{},
-    error:{}
+    error:{},
+    storiesbyauthor:{}
 }
 
 export default function(state = initialState,action){
@@ -27,6 +28,11 @@ export default function(state = initialState,action){
             return{
                 ...state,
                 error:action.payload
+            }
+        case FETCH_STORIES_BY_AUTHOR:
+            return{
+                ...state,
+                storiesbyauthor:action.payload
             }
         default:
             return state;
