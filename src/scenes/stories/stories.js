@@ -39,7 +39,7 @@ class Author extends React.Component {
   }
 
   fetchAuthor = url => {
-    authorCache.getAuthor(url).then(response => {
+    authorCache.getData(url).then(response => {
       this.setState({
         author: response
       });

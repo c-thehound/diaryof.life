@@ -1,7 +1,7 @@
 class AuthorCache {
   cache = {};
 
-  getAuthor(url) {
+  getData(url) {
     // Returns a promise for
     let result = this.cache[url];
     if (result) {

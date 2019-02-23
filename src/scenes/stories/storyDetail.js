@@ -28,7 +28,7 @@ class StoryDetail extends React.Component{
     }
 
     fetchAuthor = url => {
-        authorCache.getAuthor(url).then(response => {
+        authorCache.getData(url).then(response => {
           this.setState({
             author: response
           });
@@ -37,7 +37,7 @@ class StoryDetail extends React.Component{
 
     fetchInspiredBy = url =>{
         if(this.props.location.state.story_object.inspired_by){
-            authorCache.getAuthor(url).then(response => {
+            authorCache.getData(url).then(response => {
                 this.setState({
                     inspired_by:response
                 })
