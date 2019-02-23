@@ -99,7 +99,7 @@ p{
 .story .card .story_written_by{
     font-weight:bold;
 }
-.story .card .story_written_by span{
+.story .card .story_written_by span.name a{
     color:rgba(8, 155, 8, 0.966);
 }
 .story .card .story_published_on{

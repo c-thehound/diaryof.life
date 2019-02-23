@@ -9,8 +9,8 @@ import { NavLink } from "react-router-dom";
 import { authorCache } from "../../services/AuthorCache";
 import clip from "text-clipper";
 
-function StoryLink(props) {
-  let { story } = props;
+export function StoryLink(props) {
+  let { story} = props;
   return (
     <NavLink
       to={{
@@ -93,7 +93,7 @@ class Stories extends React.Component {
                     {stories.results.map(story => (
                       <Card key={story.url}>
                         <Card.Content>
-                          <StoryLink story={story} />
+                          <StoryLink story={story}/>
                           <p className="tagline">{story.tagline}</p>
                           <div className="snippet">
                             <p

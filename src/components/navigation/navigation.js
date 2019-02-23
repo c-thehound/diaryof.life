@@ -3,6 +3,17 @@ import {Menu,Search, Icon} from  'semantic-ui-react';
 import './navigation.css';
 import {NavLink} from 'react-router-dom';
 
+export class LoginRedirect extends React.Component{
+    componentDidMount(){
+        window.location.assign('http://127.0.0.1:8000/accounts/signin/')
+    }
+    render(){
+        return(
+            <div></div>
+        );
+    }
+}
+
 export default class Navigation extends React.Component{
 
     componentDidMount(){
@@ -32,9 +43,6 @@ export default class Navigation extends React.Component{
                 </Menu.Item>
                 <Menu.Item>
                     <NavLink to="/login">Login</NavLink>
-                </Menu.Item>
-                <Menu.Item>
-                    <NavLink to="/signup">Sign up</NavLink>
                 </Menu.Item>
                 <Menu.Item>
                     <Search></Search>

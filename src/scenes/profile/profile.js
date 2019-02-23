@@ -2,29 +2,45 @@ import React from 'react';
 import './profile.css';
 import {connect} from 'react-redux';
 import Navigation from '../../components/navigation/navigation';
-import { Grid, Card } from 'semantic-ui-react';
+import { Grid, Card, Input, TextArea } from 'semantic-ui-react';
 
 class Profile extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            author:null
+        }
+    }
+    componentDidMount(){
+
+    }
     render(){
+        const {author} = this.props.location.state;
+        console.log(author);
         return(
             <Navigation>
-            <div className="profile app-content">
-            <Grid celled stackable>
-                <Grid.Row>
-                    <Grid.Column width={5} className="profileimage">
-                    <Card
-                    image="https://i.imgur.com/g0aYvDs.jpg"
-                    />
-                    </Grid.Column>
-                    <Grid.Column width={11}>
-
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-
-                </Grid.Row>
-            </Grid>
-            </div>
+                {author === undefined ? null:
+                        <div className="profile app-content">
+                            <Grid celled stackable>
+                                    <Grid.Row>
+                                        <Grid.Column width={5} className="profileimage">
+                                        <Card
+                                        image={author.avatar}
+                                        />
+                                        </Grid.Column>
+                                        <Grid.Column width={5} className="details">
+                                        <Input icon="edit" disabled value={author.name}/>
+                                        <TextArea disabled value={author.bio_text}/>
+                                        </Grid.Column>
+                                        <Grid.Column width={5} className="moredetails">
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                    <Grid.Row>
+                    
+                                    </Grid.Row>
+                                </Grid>
+                                </div>
+                    }
             </Navigation>
         );
     }

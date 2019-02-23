@@ -3,7 +3,7 @@ import './App.css';
 import {Switch,Route,Redirect} from 'react-router-dom';
 import Home from './scenes/home/home';
 import Stories from './scenes/stories/stories';
-import SignIn from './components/signin/signin';
+import {LoginRedirect} from './components/navigation/navigation';
 import SignUp from './components/signup/signup';
 import Post from './scenes/post/post';
 import {Provider} from 'react-redux';
@@ -18,13 +18,13 @@ class App extends Component {
       <Provider store={store}>
       <div className="App">
       <Switch>
-        <Route path="/login" component={SignIn}/>
+        <Route path="/login" component={LoginRedirect}/>
         <Route path="/signup" component={SignUp}/>
         <Route path='/home' component={Home}/>
         <Route path='/stories' component={Stories}/>
         <Route path="/story/:title" component={StoryDetail}/>
         <Route path='/post' component={Post}/>
-        <Route path='/profile' component={Profile}/>
+        <Route path='/author/profile/:author' component={Profile}/>
         <Route render={() => <Redirect to="/home"/>}></Route>
       </Switch>
       </div>

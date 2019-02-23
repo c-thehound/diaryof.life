@@ -10,9 +10,27 @@
     width:100%;
 }
 .profile .profileimage .card img{
-    max-height:400px !important;
+    min-height:400px !important;
     width:100%;
     border-radius:0 !important;
+}
+.profile .details .input{
+    margin-bottom:20px;
+    width:100% !important;
+}
+.profile .details textarea{
+    min-width:100% !important;
+    max-width:100% !important;
+    min-height:100px !important;
+    padding:10px;
+    border-radius:5px !important;
+}
+.profile .details .input .icon{
+    display: none !important;
+}
+.profile .details .input:hover .profile .details .input .icon{
+    display: flex !important;
+    cursor: pointer;
 }
 
 @media(max-width:768px){
